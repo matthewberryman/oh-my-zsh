@@ -84,3 +84,6 @@ export EDITOR="vim"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# disable warning about running jobs on exit
+setopt NO_CHECK_JOBS

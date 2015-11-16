@@ -117,3 +117,6 @@ function setjdk() {
     export PATH=$JAVA_HOME/bin:$PATH
   fi
 }
+
+# disable warning about running jobs on exit
+setopt NO_CHECK_JOBS
