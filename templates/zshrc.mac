@@ -59,7 +59,7 @@ fpath=(
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/Cellar/apache-spark/1.6.0/libexec/ec2:$PATH:$HOME/bin
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
