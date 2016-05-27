@@ -120,3 +120,7 @@ function setjdk() {
 
 # disable warning about running jobs on exit
 setopt NO_CHECK_JOBS
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
