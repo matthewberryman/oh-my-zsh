@@ -76,6 +76,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="/usr/local/bin/atom -w"
 
+export PGSSLMODE=require
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

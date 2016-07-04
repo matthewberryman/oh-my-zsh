@@ -70,6 +70,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="vi"
 
+export PGSSLMODE=require
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
