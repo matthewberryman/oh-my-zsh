@@ -58,7 +58,7 @@ fpath=(
 )
 
 # User configuration
-
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/Cellar/apache-spark/1.6.0/libexec/ec2:$PATH:$HOME/bin
 export MANPATH="/usr/local/man:$MANPATH"
 
