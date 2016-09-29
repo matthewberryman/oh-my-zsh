@@ -87,5 +87,8 @@ export PGSSLMODE=require
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+autoload -U zmv
+alias mmv='noglob zmv -W'
+
 # disable warning about running jobs on exit
 setopt NO_CHECK_JOBS
