@@ -89,7 +89,7 @@ export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 # other variables
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home"
 export GDAL_DRIVER_PATH="/usr/local/lib/gdalplugins"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
