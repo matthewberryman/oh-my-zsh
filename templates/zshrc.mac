@@ -73,9 +73,10 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+# local tweaks
 export EDITOR="/usr/local/bin/atom -w"
-
 export PGSSLMODE=require
+export SLS_IGNORE_WARNING=*
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
