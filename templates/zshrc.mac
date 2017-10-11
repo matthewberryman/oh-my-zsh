@@ -75,7 +75,6 @@ source $ZSH/oh-my-zsh.sh
 
 # local tweaks
 export EDITOR="/usr/local/bin/atom -w"
-export PGSSLMODE=require
 export SLS_IGNORE_WARNING=*
 
 # Compilation flags
@@ -93,6 +92,9 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Ho
 export GDAL_DRIVER_PATH="/usr/local/lib/gdalplugins"
 
 export XZ_DEFAULTS="-9 -e -T0"
+export PGHOST=localhost
+export PGUSER=docker
+export PGSSLMODE=require
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
