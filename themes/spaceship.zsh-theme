@@ -40,6 +40,7 @@ if [ ! -n "$SPACESHIP_PROMPT_ORDER" ]; then
     pyenv
     dotnet
     ember
+    kubecontext
     exec_time
     line_sep
     battery
@@ -254,6 +255,13 @@ SPACESHIP_EMBER_PREFIX="${SPACESHIP_EMBER_PREFIX:="$SPACESHIP_PROMPT_DEFAULT_PRE
 SPACESHIP_EMBER_SUFFIX="${SPACESHIP_EMBER_SUFFIX:="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"}"
 SPACESHIP_EMBER_SYMBOL="${SPACESHIP_EMBER_SYMBOL:="🐹 "}"
 SPACESHIP_EMBER_COLOR="${SPACESHIP_EMBER_COLOR:="210"}"
+
+# KUBECONTEXT
+SPACESHIP_KUBECONTEXT_SHOW="${SPACESHIP_KUBECONTEXT_SHOW:=true}"
+SPACESHIP_KUBECONTEXT_PREFIX="${SPACESHIP_KUBECONTEXT_PREFIX:="at "}"
+SPACESHIP_KUBECONTEXT_SUFFIX="${SPACESHIP_KUBECONTEXT_SUFFIX:="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"}"
+SPACESHIP_KUBECONTEXT_SYMBOL="${SPACESHIP_KUBECONTEXT_SYMBOL:="☸️ "}"
+SPACESHIP_KUBECONTEXT_COLOR="${SPACESHIP_KUBECONTEXT_COLOR:="cyan"}"
 
 # EXECUTION TIME
 SPACESHIP_EXEC_TIME_SHOW="${SPACESHIP_EXEC_TIME_SHOW:=true}"
@@ -618,7 +626,8 @@ spaceship_package() {
   _exists npm || return
 
   # Grep and cut out package version
-  local package_version=$(grep -E '"version": "v?((\d)+\.){1,}' package.json | cut -d\" -f4 2> /dev/null)
+  # Grep -E does not support \d for digits shortcut, should use [:digit:] or [0-9] instead
+  local package_version=$(grep -E '"version": "v?([0-9]+\.){1,}' package.json | cut -d\" -f4 2> /dev/null)
 
   # Handle version not found
   if [ ! "$package_version" ]; then
@@ -1011,6 +1020,22 @@ spaceship_ember() {
     "$SPACESHIP_EMBER_PREFIX" \
     "${SPACESHIP_EMBER_SYMBOL}${ember_version}" \
     "$SPACESHIP_EMBER_SUFFIX"
+}
+
+# KUBECONTEXT
+# Show current context in kubectl.
+spaceship_kubecontext() {
+  [[ $SPACESHIP_KUBECONTEXT_SHOW == false ]] && return
+
+  _exists kubectl || return
+  local kube_context=$(kubectl config current-context 2>/dev/null)
+  [[ -z $kube_context ]] && return
+
+  _prompt_section \
+    "$SPACESHIP_KUBECONTEXT_COLOR" \
+    "$SPACESHIP_KUBECONTEXT_PREFIX" \
+    "${SPACESHIP_KUBECONTEXT_SYMBOL}${kube_context}" \
+    "$SPACESHIP_KUBECONTEXT_SUFFIX"
 }
 
 # EXECUTION TIME
