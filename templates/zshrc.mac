@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx nvm brew)
+plugins=(git osx nvm brew serverless)
 
 # Use brew completions
 fpath=(
@@ -83,10 +83,6 @@ export SLS_IGNORE_WARNING=*
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# compiler variables
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 # other variables
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
