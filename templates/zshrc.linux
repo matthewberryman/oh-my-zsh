@@ -60,6 +60,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/esp/xtensa-esp32-elf/bin
 export IDF_PATH=$HOME/esp/esp-idf
 export MANPATH="/usr/local/man:$MANPATH"
 
+# Android SDK & tools
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
