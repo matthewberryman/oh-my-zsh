@@ -108,7 +108,9 @@ autoload -U zmv
 alias mmv='noglob zmv -W'
 
 alias screensaver="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
-alias pg_start="docker run -d -p 5432:5432 --name postgresql matthewberryman/postgresql"
+
+alias pg_run="docker run -d -p 5432:5432 --name postgresql matthewberryman/postgresql"
+alias pg_start="docker start postgresql"
 alias pg_stop="docker stop postgresql"
 
 alias gsi="git secrets --install && git secrets --register-aws"
