@@ -58,7 +58,7 @@ fpath=(
 )
 
 # User configuration
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH:$HOME/bin:$HOME/esp/xtensa-esp32-elf/bin
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH:$HOME/bin:$HOME/esp/xtensa-esp32-elf/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 export IDF_PATH=$HOME/esp/esp-idf
 
@@ -75,8 +75,8 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # local tweaks
-export EDITOR="/usr/local/bin/atom -w"
 export SLS_IGNORE_WARNING=*
+export EDITOR=/usr/local/bin/vim
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
