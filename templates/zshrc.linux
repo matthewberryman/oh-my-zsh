@@ -56,9 +56,9 @@ plugins=(git ubuntu nvm docker)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/esp/xtensa-esp32-elf/bin
-export IDF_PATH=$HOME/esp/esp-idf
+export PATH=/usr/local/bin:$PATH:$HOME/bin:$HOME/.local/bin
 export MANPATH="/usr/local/man:$MANPATH"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # Android SDK & tools
 export ANDROID_HOME=$HOME/Library/Android/sdk
