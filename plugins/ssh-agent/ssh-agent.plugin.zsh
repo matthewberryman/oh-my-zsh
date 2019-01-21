@@ -12,17 +12,41 @@ function _start_agent() {
 }
 
 function _add_identities() {
-	local id line
-	local -a identities ids
+	local id line sig
+	local -a identities loaded not_loaded signatures
 	zstyle -a :omz:plugins:ssh-agent identities identities
 
-	# get list of loaded identities
-	for line in ${(f)"$(ssh-add -l)"}; do ids+=${${(z)line}[3]}; done
+	# check for .ssh folder presence
+	if [[ ! -d $HOME/.ssh ]]; then
+		return
+	fi
+
+	# add default keys if no identities were set up via zstyle
+	# this is to mimic the call to ssh-add with no identities
+	if [[ ${#identities} -eq 0 ]]; then
+		# key list found on `ssh-add` man page's DESCRIPTION section
+		for id in id_rsa id_dsa id_ecdsa id_ed25519 identity; do
+			# check if file exists
+			[[ -f "$HOME/.ssh/$id" ]] && identities+=$id
+		done
+	fi
+
+	# get list of loaded identities' signatures
+	for line in ${(f)"$(ssh-add -l)"}; do loaded+=${${(z)line}[2]}; done
+
+	# get signatures of private keys
+	for id in $identities; do
+		signatures+="$(ssh-keygen -lf "$HOME/.ssh/$id" | awk '{print $2}')	$id"
+	done
 
 	# add identities if not already loaded
-	for id in ${^identities}; do
-		[[ ${ids[(I)$HOME/.ssh/$id]} -le 0 ]] && ssh-add $HOME/.ssh/$id
+	for sig in $signatures; do
+		id="$(cut -f2 <<< $sig)"
+		sig="$(cut -f1 <<< $sig)"
+		[[ ${loaded[(I)$sig]} -le 0 ]] && not_loaded+="$HOME/.ssh/$id"
 	done
+
+	[[ -n "$not_loaded" ]] && ssh-add ${^not_loaded}
 }
 
 # Get the filename to store/lookup the environment from
