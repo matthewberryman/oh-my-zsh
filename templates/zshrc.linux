@@ -103,3 +103,6 @@ alias mmv='noglob zmv -W'
 
 # disable warning about running jobs on exit
 setopt NO_CHECK_JOBS
+
+# Intel MKL
+[ -f /opt/intel/mkl/bin/mklvars.sh ]  && source /opt/intel/mkl/bin/mklvars.sh
