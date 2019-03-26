@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="vi"
 
-export XZ_DEFAULTS="-9 -e"
+export XZ_DEFAULTS="-9 -e -T0"
 
 export PGSSLMODE=require
 
