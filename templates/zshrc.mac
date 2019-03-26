@@ -94,11 +94,11 @@ export PGUSER=docker
 export PGSSLMODE=require
 
 # brew clang & libs
-export PATH="/usr/local/Cellar/llvm/8.0.0/bin:$PATH"
-export CC=/usr/local/Cellar/llvm/8.0.0/bin/clang-8
-export CXX=/usr/local/Cellar/llvm/8.0.0/bin/clang-8
-export LDFLAGS="$LDFLAGS -L/usr/local/lib"
-export CPPFLAGS="$CPPFLAGS -I/usr/local/include/c++ -I/usr/local/include"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export CC=/usr/local/opt/llvm/bin/clang
+export CXX=/usr/local/opt/llvm/bin/clang
+export LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm/lib -L/usr/local/lib"
+export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/llvm/include -I/usr/local/include/c++ -I/usr/local/include"
 export CFLAGS="$CFLAGS -I/usr/local/include"
 export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib
 
