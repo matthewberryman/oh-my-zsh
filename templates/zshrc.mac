@@ -93,14 +93,13 @@ export PGHOST=localhost
 export PGUSER=docker
 export PGSSLMODE=require
 
-# brew clang & libs
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export CC=/usr/local/opt/llvm/bin/clang
-export CXX=/usr/local/opt/llvm/bin/clang
-export LDFLAGS="$LDFLAGS -L/usr/local/opt/llvm/lib -L/usr/local/lib"
-export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/llvm/include -I/usr/local/include/c++ -I/usr/local/include"
+# gcc & libs
+export CC=/usr/local/bin/gcc-8
+export CXX=/usr/local/bin/g++-8
+export LDFLAGS="$LDFLAGS -L/usr/local/Cellar/gcc/8.3.0/lib/gcc/8 -L/usr/local/lib"
+export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/gcc/include -I/usr/local/include/c++ -I/usr/local/include"
 export CFLAGS="$CFLAGS -I/usr/local/include"
-export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib
+export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/lib:/usr/local/Cellar/gcc/8.3.0/lib/gcc/8
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
