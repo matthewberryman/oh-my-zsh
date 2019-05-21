@@ -94,7 +94,7 @@ export PGUSER=docker
 export PGSSLMODE=require
 
 # gcc & libs
-alias gcc='export CC=/usr/local/bin/gcc-9 && export CXX=/usr/local/bin/g++-9'
+alias use_gcc='export CC=/usr/local/bin/gcc-9 && export CXX=/usr/local/bin/g++-9'
 export LDFLAGS="$LDFLAGS -L/usr/local/Cellar/gcc/9.1.0/lib/gcc/8 -L/usr/local/lib"
 export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/gcc/include -I/usr/local/include/c++ -I/usr/local/include"
 export CFLAGS="$CFLAGS -I/usr/local/include"
