@@ -107,3 +107,6 @@ setopt NO_CHECK_JOBS
 # Intel MKL
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && source /opt/intel/mkl/bin/mklvars.sh intel64
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && export MKL="-Wl,--no-as-needed -lmkl_gf_lp64 -Wl,--start-group -lmkl_gnu_thread  -lmkl_core  -Wl,--end-group -fopenmp  -ldl -lpthread -lm"
+
+# disassembler
+alias disasm='objdump -drwC -Mintel'
