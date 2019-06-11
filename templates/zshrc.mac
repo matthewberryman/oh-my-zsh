@@ -144,13 +144,3 @@ asp default
 
 # Intel MKL
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && source /opt/intel/mkl/bin/mklvars.sh
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/matthew/.nvm/versions/node/v12.3.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/matthew/.nvm/versions/node/v12.3.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/matthew/.nvm/versions/node/v12.3.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/matthew/.nvm/versions/node/v12.3.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/matthew/.nvm/versions/node/v12.3.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/matthew/.nvm/versions/node/v12.3.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
