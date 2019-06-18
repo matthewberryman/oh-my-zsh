@@ -110,3 +110,6 @@ setopt NO_CHECK_JOBS
 
 # disassembler
 alias disasm='objdump -drwC -Mintel'
+
+# perf defaults
+alias precord='sudo perf record -r 1 --call-graph dwarf'
