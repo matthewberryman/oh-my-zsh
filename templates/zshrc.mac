@@ -139,7 +139,7 @@ function setjdk() {
 setopt NO_CHECK_JOBS
 
 # for AWS plugin, use default profile by default
-asp default
+asp atc-default
 
 # Intel MKL
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && source /opt/intel/mkl/bin/mklvars.sh
