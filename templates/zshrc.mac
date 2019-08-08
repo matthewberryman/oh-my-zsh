@@ -85,7 +85,7 @@ export EDITOR=/usr/local/bin/vim
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # other variables
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home"
 export GDAL_DRIVER_PATH="/usr/local/lib/gdalplugins"
 
 export XZ_DEFAULTS="-9 -e -T0"
