@@ -17,4 +17,4 @@ physicalCpuCount=$([ $(uname) = 'Darwin' ] &&
                        sysctl -n hw.physicalcpu_max ||
                        lscpu -p | egrep -v '^#' | sort -u -t, -k 2,4 | wc -l)
 
-export MAKEFLAGS=$MAKEFLAGS' -j'$logicalCpuCount # recommended, if running out of memory try physicalCpuCount
+export MAKEFLAGS=$MAKEFLAGS' -j'$physicalCpuCount 
