@@ -93,13 +93,6 @@ export PGHOST=localhost
 export PGUSER=docker
 export PGSSLMODE=require
 
-# gcc & libs
-alias use_gcc='export CC=/usr/local/bin/gcc-9 && export CXX=/usr/local/bin/g++-9'
-export LDFLAGS="$LDFLAGS -L/usr/local/Cellar/gcc/9.1.0/lib/gcc/8 -L/usr/local/lib"
-export CPPFLAGS="$CPPFLAGS -I/usr/local/opt/gcc/include -I/usr/local/include/c++ -I/usr/local/include"
-export CFLAGS="$CFLAGS -I/usr/local/include"
-export DYLD_FALLBACK_LIBRARY_PATH=$HOME/lib:/usr/local/lib:/usr/local/Cellar/gcc/9.1.0/lib/gcc/9
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
