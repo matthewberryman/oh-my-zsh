@@ -1,4 +1,4 @@
-# custom files
+s# custom files
 custom/
 
 # temp files directories
@@ -7,3 +7,4 @@ log/
 
 #
 .DS_Store
+*.swp
