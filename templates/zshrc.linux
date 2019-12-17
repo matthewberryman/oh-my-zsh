@@ -109,7 +109,7 @@ setopt NO_CHECK_JOBS
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && export MKL="-Wl,--no-as-needed -lmkl_gf_lp64 -Wl,--start-group -lmkl_gnu_thread  -lmkl_core  -Wl,--end-group -fopenmp  -ldl -lpthread -lm"
 
 # Intel MPI
-[ -f /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh ] && source  /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh
+# [ -f /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh ] && source  /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh
 
 # disassembler
 alias disasm='objdump -drwC -Mintel'
