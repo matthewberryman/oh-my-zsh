@@ -111,7 +111,7 @@ setopt NO_CHECK_JOBS
 # MPI
 export FC=mpif90
 export CC=mpicc
-export CXX=mpicc
+export CXX=mpic++
 
 # Intel MPI
 # [ -f /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh ] && source  /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh
