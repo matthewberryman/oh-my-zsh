@@ -108,6 +108,11 @@ setopt NO_CHECK_JOBS
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && source /opt/intel/mkl/bin/mklvars.sh intel64
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && export MKL="-Wl,--no-as-needed -lmkl_gf_lp64 -Wl,--start-group -lmkl_gnu_thread  -lmkl_core  -Wl,--end-group -fopenmp  -ldl -lpthread -lm"
 
+# MPI
+export FC=mpif90
+export CC=mpicc
+export CXX=mpicc
+
 # Intel MPI
 # [ -f /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh ] && source  /opt/intel/impi/2019.4.243/intel64/bin/mpivars.sh
 
