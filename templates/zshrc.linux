@@ -120,7 +120,7 @@ export MPI_CXX_COMPILER=mpic++
 alias disasm='objdump -drwC -Mintel'
 
 # perf defaults
-alias precord='sudo perf record -r 1 --call-graph dwarf'
+alias precord='sudo OMP_NUM_THREADS=1 perf record -r 1 --call-graph dwarf'
 
 # valgrind in R
 alias valgrindR='R -d "valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose"'
