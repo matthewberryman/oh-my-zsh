@@ -136,3 +136,5 @@ setopt NO_CHECK_JOBS
 
 # Intel MKL
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && source /opt/intel/mkl/bin/mklvars.sh
+
+source $HOME/.zshrc_local
