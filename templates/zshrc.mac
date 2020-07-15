@@ -138,3 +138,5 @@ setopt NO_CHECK_JOBS
 [ -f /opt/intel/mkl/bin/mklvars.sh ]  && source /opt/intel/mkl/bin/mklvars.sh
 
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
+unalias gam
+gam() { "/Users/matthew/bin/gam/gam" "$@" ; }
