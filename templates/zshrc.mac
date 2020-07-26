@@ -140,4 +140,3 @@ setopt NO_CHECK_JOBS
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
 unalias gam
 gam() { "$HOME/bin/gam/gam" "$@" ; }
-test -e $HOME/.iterm2_shell_integration.zsh && source $HOME/.iterm2_shell_integration.zsh || true
