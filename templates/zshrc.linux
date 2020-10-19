@@ -122,7 +122,7 @@ alias disasm='objdump -drwC -Mintel'
 # perf defaults
 alias precord='sudo OMP_NUM_THREADS=1 perf record -r 1 --call-graph dwarf'
 
-# valgrind in R
-alias valgrindR='R -d "valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose"'
+# valgrind
+alias valg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --trace-children=yes --log-file=valgrind-out.txt'
 
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
