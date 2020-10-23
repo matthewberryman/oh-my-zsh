@@ -56,7 +56,7 @@ plugins=(git ubuntu nvm docker make)
 
 # User configuration
 
-export PATH=/usr/local/bin:$PATH:$HOME/bin:$HOME/.local/bin
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
