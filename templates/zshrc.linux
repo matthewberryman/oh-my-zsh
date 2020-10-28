@@ -125,4 +125,9 @@ alias precord='sudo OMP_NUM_THREADS=1 perf record -r 1 --call-graph dwarf'
 # valgrind
 alias valg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --trace-children=yes --log-file=valgrind-out.txt'
 
+# copy tmux conf in place if it doesn't exist
+if [[ ! -f $HOME/.tmux.conf ]]; then
+  ln -s $HOME/.oh-my-zsh/templates/tmux.conf $HOME/.tmux.conf
+fi
+
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
