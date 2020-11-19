@@ -89,9 +89,6 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Conten
 export GDAL_DRIVER_PATH="/usr/local/lib/gdalplugins"
 
 export XZ_DEFAULTS="-9 -e -T0"
-export PGHOST=localhost
-export PGUSER=docker
-export PGSSLMODE=require
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -106,10 +103,6 @@ autoload -U zmv
 alias mmv='noglob zmv -W'
 
 alias screensaver="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
-
-alias pg_run="docker run -d -p 5432:5432 --name postgresql matthewberryman/postgresql"
-alias pg_start="docker start postgresql"
-alias pg_stop="docker stop postgresql"
 
 alias gsi="git secrets --install && git secrets --register-aws"
 
