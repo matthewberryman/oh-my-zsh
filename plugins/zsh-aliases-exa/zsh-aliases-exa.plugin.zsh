@@ -9,7 +9,7 @@
 #
 
 # general use
-alias ls='exa'                                                         # ls
+alias ls='exa -lbF --git'                                                         # ls
 alias l='exa -lbF --git'                                               # list, size, type, git
 alias ll='exa -lbGF --git'                                             # long list
 alias llm='exa -lbGF --git --sort=modified'                            # long list, modified date sort
